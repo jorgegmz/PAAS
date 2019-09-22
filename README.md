@@ -1,22 +1,6 @@
 # PAAS
 Passwd as a Service is a minimal HTTP web service that exposes the user and group information on a UNIX-like system.
 
-## Directory Sturcture
-```
-+-- PAAS
-| +-- Dockerfile
-| +-- passwd_as_a_service
-    | +-- src
-        | +-- app.py
-        | +-- cloud_service.py
-        | +-- __init__.py
-    | +-- test
-        | +-- __init__.py
-        | +-- test_cloud_service.py 
-| +-- build_and_run_docker.sh
-| +-- README.md
-| +-- requirements.txt 
-```
 
 ## Installation
 Update and or upgrade packages
@@ -60,12 +44,12 @@ Response:
 ```
 
 ## Installation for Docker
-Download and install [docker] (https://docs.docker.com/install/linux/docker-ce/ubuntu/) for Linux Ubuntu systems
+Download and install 
+[docker] (https://docs.docker.com/install/linux/docker-ce/ubuntu/) for Linux Ubuntu systems
 
 ### Once docker is installed
 ```bash
-cd passwd_as_a_service
-bash run_me.sh
+bash build_and_run_docker.sh
 ```
 The run_me.sh file will build and run the docker container. To verify the container is up and running use. This will show which containers are currently running. 
 ```bash
@@ -103,3 +87,20 @@ Testing can be run from PAAS/ directory
 python -m unittest discover -v
 ```
 
+## Project Sturcture
+```
++-- PAAS
+| +-- Dockerfile
+| +-- passwd_as_a_service
+    | +-- src
+        | +-- app.py
+        | +-- cloud_service.py
+        | +-- __init__.py
+    | +-- test
+        | +-- __init__.py
+        | +-- test_cloud_service.py 
+| +-- build_and_run_docker.sh
+| +-- README.md
+| +-- requirements.txt 
+```
+Project Sturcture
