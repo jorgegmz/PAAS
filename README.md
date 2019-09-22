@@ -45,7 +45,7 @@ Response:
 
 ## Installation for Docker
 Download and install 
-[docker] (https://docs.docker.com/install/linux/docker-ce/ubuntu/) for Linux Ubuntu systems
+[docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/) for Linux Ubuntu systems
 
 ### Once docker is installed
 ```bash
