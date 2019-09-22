@@ -1,1 +1,105 @@
 # PAAS
+This project is a minimal HTTP web service that exposes the user and group information on a UNIX-like system.
+
+## Directory Sturcture
++-- PAAS
+| +-- passwd_as_a_service
+    | +-- passwd_as_a_service
+        | +-- app.py
+        | +-- cloud_service.py
+        | +-- Dockerfile
+        | +-- __init__.py
+        | +-- how_to_run
+        | +-- run_me.sh
+    | +-- test
+        | +-- __init__.py
+        | +-- test_cloud_service.py 
+| +-- README.md
+| +-- requirements.txt 
+
+## Installation for usage on localhost server without Docker
+Update and or upgrade packages
+```bash
+apt-get update && apt-get upgrade
+```
+
+Use the package manager pip for installation of required packages. Run at PAAS/passwd_as_a_service directory
+```bash
+pip install -r requirements.txt
+```
+### Running web service
+```bash
+$cd /passwd_as_a_service/passwd_as_a_service
+$cat how_to_run
+copy output
+$gunicorn -w 4 --threads 12 -b 0.0.0.0:5000 app:app
+```
+Webserver is now up and running.
+```bash
+Example:
+http://localhost:5000/users
+Response:
+[
+  {
+    "comment": "root", 
+    "gid": "0", 
+    "home": "/root", 
+    "name": "root", 
+    "shell": "/bin/bash\n", 
+    "uid": "0"
+  }, 
+  {
+    "comment": "daemon", 
+    "gid": "1", 
+    "home": "/usr/sbin", 
+    "name": "daemon", 
+    "shell": "/usr/sbin/nologin\n", 
+    "uid": "1"
+  }
+]
+```
+
+## Installation for usage using Docker
+Download and install [docker] (https://docs.docker.com/install/linux/docker-ce/ubuntu/) for Linux Ubuntu systems
+
+### Once docker is installed
+```bash
+cd /passwd_as_a_service/passwd_as_a_service
+bash run_me.sh
+```
+The run_me.sh file will build and run the docker container. To verify the container is up and running use. This will show which containers are currently running. 
+```bash
+sudo docker ps -a
+```
+Open browser.
+```bash
+Example:
+http://localhost:5000/users
+Response:
+An array of users on /etc/passwd
+[
+  {
+    "comment": "root", 
+    "gid": "0", 
+    "home": "/root", 
+    "name": "root", 
+    "shell": "/bin/bash\n", 
+    "uid": "0"
+  }, 
+  {
+    "comment": "daemon", 
+    "gid": "1", 
+    "home": "/usr/sbin", 
+    "name": "daemon", 
+    "shell": "/usr/sbin/nologin\n", 
+    "uid": "1"
+  }
+]
+```
+
+## Testing
+Testing can be run from PAAS/passwd_as_a_service directory
+```bash
+python -m unittest discover -v
+```
+
