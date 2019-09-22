@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 
 echo "Stopping container"
 sudo docker stop cloud-api-service
