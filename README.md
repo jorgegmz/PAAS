@@ -2,6 +2,7 @@
 This project is a minimal HTTP web service that exposes the user and group information on a UNIX-like system.
 
 ## Directory Sturcture
+```
 +-- PAAS
 | +-- passwd_as_a_service
     | +-- passwd_as_a_service
@@ -16,6 +17,7 @@ This project is a minimal HTTP web service that exposes the user and group infor
         | +-- test_cloud_service.py 
 | +-- README.md
 | +-- requirements.txt 
+```
 
 ## Installation for usage on localhost server without Docker
 Update and or upgrade packages
