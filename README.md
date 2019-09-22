@@ -8,7 +8,7 @@ Update and or upgrade packages
 apt-get update && apt-get upgrade
 ```
 
-Use the package manager pip for installation of required packages. Run at PAAS/ directory. Passwd as a Service supports both python2 and python3
+Use the package manager pip for installation of required packages. Run at PAAS/ directory. Passwd as a Service supports both python2.7 and python3.7
 ```bash
 pip install -r requirements.txt
 export PATH=$PATH:~/.local/bin/
@@ -103,4 +103,3 @@ python -m unittest discover -v
 | +-- README.md
 | +-- requirements.txt 
 ```
-Project Structure inspired by Apache Ambari and Apache Airflow 
