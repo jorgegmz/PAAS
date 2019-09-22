@@ -82,7 +82,7 @@ An array of users on /etc/passwd
 ```
 
 ## Testing
-Testing can be run from PAAS/ directory
+Testing can be run from PAAS/passwd_as_a_service directory
 ```bash
 python -m unittest discover -v
 ```
