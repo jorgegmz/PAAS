@@ -1,5 +1,5 @@
 import unittest
-from passwd_as_a_service.cloud_service import CloudService
+from src.cloud_service import CloudService
 
 class TestCloudAPIService(unittest.TestCase):
     def setUp(self):

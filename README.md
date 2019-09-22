@@ -1,14 +1,14 @@
 # PAAS
-This project is a minimal HTTP web service that exposes the user and group information on a UNIX-like system.
+Passwd as a Service is a minimal HTTP web service that exposes the user and group information on a UNIX-like system.
 
 ## Directory Sturcture
 ```
 +-- PAAS
+| +-- Dockerfile
 | +-- passwd_as_a_service
-    | +-- passwd_as_a_service
+    | +-- src
         | +-- app.py
         | +-- cloud_service.py
-        | +-- Dockerfile
         | +-- __init__.py
         | +-- how_to_run
         | +-- run_me.sh
@@ -19,19 +19,20 @@ This project is a minimal HTTP web service that exposes the user and group infor
 | +-- requirements.txt 
 ```
 
-## Installation for usage on localhost server without Docker
+## Installation
 Update and or upgrade packages
 ```bash
 apt-get update && apt-get upgrade
 ```
 
-Use the package manager pip for installation of required packages. Run at PAAS/passwd_as_a_service directory
+Use the package manager pip for installation of required packages. Run at PAAS/ directory. Passwd as a Service supports both python2 and python3
 ```bash
 pip install -r requirements.txt
+export PATH=$PATH:~/.local/bin/
 ```
 ### Running web service
 ```bash
-$cd /passwd_as_a_service/passwd_as_a_service
+$cd passwd_as_a_service/
 $cat how_to_run
 copy output
 $gunicorn -w 4 --threads 12 -b 0.0.0.0:5000 app:app
@@ -61,12 +62,12 @@ Response:
 ]
 ```
 
-## Installation for usage using Docker
+## Installation for Docker
 Download and install [docker] (https://docs.docker.com/install/linux/docker-ce/ubuntu/) for Linux Ubuntu systems
 
 ### Once docker is installed
 ```bash
-cd /passwd_as_a_service/passwd_as_a_service
+cd passwd_as_a_service
 bash run_me.sh
 ```
 The run_me.sh file will build and run the docker container. To verify the container is up and running use. This will show which containers are currently running. 
@@ -100,7 +101,7 @@ An array of users on /etc/passwd
 ```
 
 ## Testing
-Testing can be run from PAAS/passwd_as_a_service directory
+Testing can be run from PAAS/ directory
 ```bash
 python -m unittest discover -v
 ```

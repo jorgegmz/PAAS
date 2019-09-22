@@ -1,6 +1,6 @@
 FROM python:3.7
 
-COPY . /app
+COPY ./passwd_as_a_service/passwd_as_a_service/ /app
 WORKDIR /app
 # Install apt packages
 RUN apt-get update && apt-get install -y \
