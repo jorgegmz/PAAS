@@ -10,7 +10,6 @@ Passwd as a Service is a minimal HTTP web service that exposes the user and grou
         | +-- app.py
         | +-- cloud_service.py
         | +-- __init__.py
-        | +-- how_to_run
     | +-- test
         | +-- __init__.py
         | +-- test_cloud_service.py 
@@ -33,8 +32,6 @@ export PATH=$PATH:~/.local/bin/
 ### Running web service
 ```bash
 $cd passwd_as_a_service/
-$cat how_to_run
-copy output
 $gunicorn -w 4 --threads 12 -b 0.0.0.0:5000 app:app
 ```
 Webserver is now up and running.
