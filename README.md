@@ -11,10 +11,10 @@ Passwd as a Service is a minimal HTTP web service that exposes the user and grou
         | +-- cloud_service.py
         | +-- __init__.py
         | +-- how_to_run
-        | +-- run_me.sh
     | +-- test
         | +-- __init__.py
         | +-- test_cloud_service.py 
+| +-- build_and_run_docker.sh
 | +-- README.md
 | +-- requirements.txt 
 ```
