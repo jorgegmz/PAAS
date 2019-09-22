@@ -12,7 +12,14 @@ class TestCloudAPIService(unittest.TestCase):
         self.assertIsNot(self.func.get_passwd_users_using_query_parameters({'name':'rootts'})
                 , {'names':'root'})
     def test_valid_username(self):
-        self
+        self.func.get_passwd_users_using_query_parameters({'name':'root'})
+        self.assertEqual(self.func.passwd_users_match_params, [{"comment": "root"
+            ,"gid": "0"
+            ,"home": "/root"
+            ,"name": "root"
+            ,"shell": "/bin/bash\n"
+            ,"uid": "0"
+            }])
 
 if __name__=='__main__':
     unittest.main()

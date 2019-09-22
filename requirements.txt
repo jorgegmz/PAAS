@@ -1,0 +1,5 @@
+gunicorn==19.4.5
+futures
+flask
+flask-cors
+requests==2.20.1
