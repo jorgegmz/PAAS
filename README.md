@@ -51,7 +51,7 @@ Download and install
 ```bash
 bash build_and_run_docker.sh
 ```
-The run_me.sh file will build and run the docker container. To verify the container is up and running use. This will show which containers are currently running. 
+The build_and_run_docker.sh file will build and run the docker container. To verify the container is up and running use. This will show which containers are currently running. 
 ```bash
 sudo docker ps -a
 ```
@@ -87,7 +87,7 @@ Testing can be run from PAAS/ directory
 python -m unittest discover -v
 ```
 
-## Project Sturcture
+## Project Structure
 ```
 +-- PAAS
 | +-- Dockerfile
@@ -103,4 +103,4 @@ python -m unittest discover -v
 | +-- README.md
 | +-- requirements.txt 
 ```
-Project Sturcture
+Project Structure inspired by Apache Ambari and Apache Airflow 
