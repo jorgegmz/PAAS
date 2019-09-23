@@ -15,7 +15,7 @@ export PATH=$PATH:~/.local/bin/
 ```
 ### Running web service
 ```bash
-$cd passwd_as_a_service/
+$cd passwd_as_a_service/src
 $gunicorn -w 4 --threads 12 -b 0.0.0.0:5000 app:app
 ```
 Webserver is now up and running.
